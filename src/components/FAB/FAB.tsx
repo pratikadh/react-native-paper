@@ -145,6 +145,7 @@ class FAB extends React.Component<Props, State> {
       visible,
       loading,
       testID,
+      iconSize,
       ...rest
     } = this.props;
     const { visibility } = this.state;
@@ -219,7 +220,7 @@ class FAB extends React.Component<Props, State> {
             pointerEvents="none"
           >
             {icon && loading !== true ? (
-              <CrossFadeIcon source={icon} size={24} color={foregroundColor} />
+              <CrossFadeIcon source={icon} size={iconSize} color={foregroundColor} />
             ) : null}
             {loading ? (
               <ActivityIndicator size={18} color={foregroundColor} />
