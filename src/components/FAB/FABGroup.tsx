@@ -216,6 +216,8 @@ class FABGroup extends React.Component<Props, State> {
       fabStyle,
       visible,
       testID,
+      iconSize,
+      iconActionSize
     } = this.props;
     const { colors } = theme;
 
@@ -292,6 +294,7 @@ class FABGroup extends React.Component<Props, State> {
                   </Card>
                 )}
                 <FAB
+                  iconSize={iconActionSize}
                   small
                   icon={it.icon}
                   color={it.color}
@@ -327,6 +330,7 @@ class FABGroup extends React.Component<Props, State> {
               onPress?.();
               this.toggle();
             }}
+            iconSize={iconSize}
             icon={icon}
             color={this.props.color}
             accessibilityLabel={accessibilityLabel}
